@@ -5,9 +5,15 @@ package gfg;
 
 class MinSwapsPalindrome {
 
+    private static void swap(char[] arr, int x, int y){
+        char temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
+    }
+
     private static int countSwaps(char[] arr, int x, int y){
         int swapCount = 0;
-        if(x>=y) {
+        if(x >= y) {
             return -1;
         }
 
@@ -19,34 +25,30 @@ class MinSwapsPalindrome {
         return swapCount;
     }
 
-    private static void swap(char[] arr, int x, int y){
-        char temp = arr[x];
-        arr[x] = arr[y];
-        arr[y] = temp;
-    }
-
     private static int countSwaps(String str){
         int minSwaps = 0;
         char[] arr = str.toCharArray();
 
-        for(int i=0, j=arr.length-1; i<j; i++){
-            if(arr[i] == arr[j]) {
+        for(int i=0, j=arr.length-1; i<j; ){
+            boolean bothPointersSame = arr[i] == arr[j];
+            if(bothPointersSame) {
                 i++;
                 j--;
                 continue;
             } else {
                 int a = i;
-                int b = j-1;
+                int b = j;
 
-                while (a<b){
+                while (a < b){
                     if(arr[a] == arr[b]) {
                         minSwaps = minSwaps + countSwaps(arr, b, j);
                         j = b-1;
                         break;
+                    } else {
+                        b--;
                     }
-                    b--;
                 }
-                if(a>=b) {
+                if(a >= b) {
                     return -1;
                 }
             }
@@ -55,9 +57,14 @@ class MinSwapsPalindrome {
         return minSwaps;
     }
 
-
-
     public static void main(String[] args) {
-        System.out.println(countSwaps("aaba"));
+        // System.out.println( "aab -> " + countSwaps("aab"));
+        // System.out.println("aaba -> " + countSwaps("aaba"));
+        // System.out.println("aabaa -> " + countSwaps("aabaa"));
+        String str = "bananaa";
+
+        String str2 = new StringBuilder(str).reverse().toString();
+
+        System.out.println("bananaa -> " + countSwaps(str2));
     }
 }
