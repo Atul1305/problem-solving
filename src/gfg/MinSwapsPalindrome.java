@@ -53,8 +53,23 @@ class MinSwapsPalindrome {
                 }
             }
         }
-
         return minSwaps;
+    }
+
+    private static int min(int count, int reverseCount) {
+
+        if( count == -1 && reverseCount == -1 )
+            return -1;
+        else if (reverseCount == -1 && count > 0)
+            return count;
+        else if (count == -1 && reverseCount > 0)
+            return reverseCount;
+        else {
+            if (reverseCount < count)
+                return reverseCount;
+            else
+                return count;
+        }
     }
 
     public static void main(String[] args) {
@@ -62,9 +77,13 @@ class MinSwapsPalindrome {
         // System.out.println("aaba -> " + countSwaps("aaba"));
         // System.out.println("aabaa -> " + countSwaps("aabaa"));
         String str = "bananaa";
+        int count = countSwaps(str);
+        System.out.println("count -> " + count);
 
-        String str2 = new StringBuilder(str).reverse().toString();
+        String reverseStr = new StringBuilder(str).reverse().toString();
+        int reverseCount = countSwaps(reverseStr);
+        System.out.println("reverseCount -> " + reverseCount);
 
-        System.out.println("bananaa -> " + countSwaps(str2));
+        System.out.println("Min Swap Count : " + min(count, reverseCount));
     }
 }
