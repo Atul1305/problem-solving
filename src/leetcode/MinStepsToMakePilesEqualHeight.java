@@ -6,4 +6,5 @@ package leetcode;
 
 
 public class MinStepsToMakePilesEqualHeight {
+
 }
