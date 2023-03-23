@@ -2,15 +2,15 @@ package leetcode;
 
 /**
  * 
- * Problem No. 121
- * Link -> https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ * Problem No. 122
+ * Link -> https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * @since Feb 26th, 2023
  * 
  * Algo - Dynamic Programming, Sliding Window
  * 
  */
 
-public class BestTimeToBuyStock {
+public class BestTimeToBuyStock2 {
 
     public static void main(String[] args) {
         int[] arr = new int[]{7,1,5,3,6,4};
@@ -22,6 +22,8 @@ public class BestTimeToBuyStock {
         int maxProfit = 0;
 
         for(int i=0; i<prices.length; i++) {
+
+            // TODO - Change Logic
             if(cheapestPrice > prices[i] ) {
                 cheapestPrice = prices[i];
                 continue;
