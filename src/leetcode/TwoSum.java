@@ -31,7 +31,7 @@ public class TwoSum {
             int find = target - nums[i];
             if(indexer.containsKey(find)) {
                 result[0] = indexer.get(find);
-                result[1] = 1;
+                result[1] = i;
                 break;
             }
             indexer.put(nums[i], i);
