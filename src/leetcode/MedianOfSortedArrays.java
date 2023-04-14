@@ -52,7 +52,8 @@ public class MedianOfSortedArrays {
         if(combinedLen % 2 == 0) {
             int i1 = combinedLen/2;
             int i2 = i1-1;
-            return (combinedArr[i1] + combinedArr[i2])/2;
+            double sum  = combinedArr[i1] + combinedArr[i2];
+            return sum/2;
         } else {
             int i1 = combinedLen/2;
             return combinedArr[i1];
