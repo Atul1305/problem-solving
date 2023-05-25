@@ -1,5 +1,8 @@
 package general;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 /**
  * Problem Link : https://www.educative.io/answers/spiral-matrix-algorithm
  * @since 14/04/2023
@@ -11,7 +14,7 @@ public class SpiralMatrix {
                         {4},
                         {7}};
         Set<Integer> spiralMatrixSet = new LinkedHashSet<>();
-        int x1=0, x2=1, y1=0, y2=3;
+        int x1=0, x2=3, y1=0, y2=1;
 
         // TODO : Think about this condition.
         while(x1<x2) {
