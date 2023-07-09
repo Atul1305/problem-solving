@@ -14,7 +14,7 @@ import java.util.Map;
  * @since March 23rd, 2023
  * 
  */
-public class         {
+public class TwoSum {
 
     public static void main(String[] args) {
         TwoSum twoSum = new TwoSum();
