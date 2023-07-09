@@ -4,7 +4,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * Problem Link : https://www.educative.io/answers/spiral-matrix-algorithm
+ * @see : https://www.educative.io/answers/spiral-matrix-algorithm
  * @since 14/04/2023
  */
 public class SpiralMatrix {

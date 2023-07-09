@@ -1,5 +1,7 @@
-/*
-* Link -> 4. Median of Two Sorted Arrays.
+package leetcode;
+
+/**
+* @see -> 4. Median of Two Sorted Arrays.
 * @since Apr 4th, 2023
 *
 * Algo -

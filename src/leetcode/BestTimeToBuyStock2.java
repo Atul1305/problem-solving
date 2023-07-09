@@ -3,7 +3,8 @@ package leetcode;
 /**
  * 
  * Problem No. 122
- * Link -> https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+ *
+ * @see -> https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * @since Feb 26th, 2023
  * 
  * Algo - Dynamic Programming, Sliding Window

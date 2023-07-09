@@ -10,9 +10,9 @@ import java.util.Map;
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  * You can return the answer in any order.
  * 
- * Link -> https://leetcode.com/problems/two-sum/description/
+ * @see -> https://leetcode.com/problems/two-sum/description/
  * @since March 23rd, 2023
- * 
+ *
  */
 public class TwoSum {
 

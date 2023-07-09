@@ -1,6 +1,6 @@
 package gfg;
-/*
- * Problem Link : https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
+/**
+ * @see https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
  * @since 16/02/2023
  * 
  * Input: arr[] = {0, -1, 2, -3, 1}, x= -2

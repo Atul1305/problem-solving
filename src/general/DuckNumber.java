@@ -1,7 +1,7 @@
 package general;
 
 /**
- * Problem Link : https://www.geeksforgeeks.org/videos/java-program-to-check-duck-number/?utm_source=geeksforgeeks&utm_medium=article_video_tab&utm_campaign=article_video_tab
+ * @see : https://www.geeksforgeeks.org/videos/java-program-to-check-duck-number/?utm_source=geeksforgeeks&utm_medium=article_video_tab&utm_campaign=article_video_tab
  * @since 05/02/2023
  */
 public class DuckNumber {
