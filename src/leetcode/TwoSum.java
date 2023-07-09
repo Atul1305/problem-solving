@@ -21,7 +21,7 @@ public class TwoSum {
         int[] result = twoSum.twoSum(new int[]{3,2,4}, 6);
 
         for (int i=0; i < result.length; i++) {
-            System.out.println(result);
+            System.out.println(result[i]);
         }
     }
 
@@ -30,7 +30,7 @@ public class TwoSum {
 
         Map<Integer, Integer> indexer = new HashMap<>();
 
-        for (int indexOfCurrentNum=0; i<nums.length; i++) {
+        for (int indexOfCurrentNum=0; indexOfCurrentNum<nums.length; indexOfCurrentNum++) {
             int find = target - nums[indexOfCurrentNum];
             if(indexer.containsKey(find)) {
                 result[0] = indexer.get(find);
