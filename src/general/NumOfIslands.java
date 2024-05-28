@@ -1,6 +1,8 @@
+package general;
+
 /**
  * 
- * @see : https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/1
+ * Problem Link : https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/1
  * @since 06/02/2023
  * 
  */
@@ -8,8 +10,6 @@
  public class NumOfIslands {
 
     public static void main(String[] args) {
-        //int[][] matrix = {{0,1},{1,0},{1,1},{1,0}};
-
         int[][] matrix = { {1, 1, 0, 0, 0},
                            {0, 1, 0, 0, 1},
                            {1, 0, 0, 1, 1},

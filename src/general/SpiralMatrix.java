@@ -1,49 +1,77 @@
 package general;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * @see : https://www.educative.io/answers/spiral-matrix-algorithm
+ *
+ * Problem Link : https://www.educative.io/answers/spiral-matrix-algorithm
  * @since 14/04/2023
+ *
  */
 public class SpiralMatrix {
 
     public static void main(String[] args) {
-        int[][] mat = { {1},
-                        {4},
-                        {7}};
-        Set<Integer> spiralMatrixSet = new LinkedHashSet<>();
-        int x1=0, x2=3, y1=0, y2=1;
+        /*int[][] matrix = {  {1, 2, 3, 4, 5},
+                            {16, 17, 18, 19, 6},
+                            {15, 24, 25, 20, 7},
+                            {14, 23, 22, 21, 8},
+                            {13, 12, 11, 10, 9}
+        };*/
+        int[][] matrix = {  {1, 2, 3, 4, 5},
+                            {16, 17, 18, 19, 6}
+        };
 
-        // TODO : Think about this condition.
-        while(x1<x2) {
-            addBoundaryElement(mat, x1, x2, y1, y2, spiralMatrixSet);
+        //printMatrix(matrix, 5, 5);
+        List<Integer> result = new ArrayList<>();
+        int x1 = 0;
+        int x2 = 5;
+        int y1 = 0;
+        int y2 = 2;
+        while(x1 < x2 || y1 < y2) {
+            spiralMatrix(matrix, result, x1, y1, x2, y2);
             x1++;
             x2--;
             y1++;
             y2--;
         }
+        printList( result);
 
-        System.out.println("Spiral Matrix is - " + spiralMatrixSet);
     }
 
-    private static void addBoundaryElement(int[][] mat, int x1, int x2, int y1, int y2, Set<Integer> spiralMatrixSet) {
+    private static void spiralMatrix(int[][] matrix, List<Integer> result, int x1, int y1, int x2, int y2) {
+        for(int j = x1; j < x2; j++) {
+            result.add(matrix[x1][j]);
+        }
+        for(int i = x1+1; i < x2; i++) {
+            int j = y2-1;
+            result.add(matrix[i][j]);
+        }
+        for(int j = y2-2; j >= y1; j--) {
+            int i = x2-1;
+            result.add(matrix[i][j]);
+        }
+        for(int i = x2-2; i > x1; i--) {
+            int j = y1;
+            result.add(matrix[i][j]);
+        }
 
-        for (int i = x1; i < x2; i++) {
-            spiralMatrixSet.add(mat[i][y1]);
-        }
-        for (int i = y1; i < y2; i++) {
-            spiralMatrixSet.add(mat[x2-1][i]);
-        }
-        for (int i = x2-1; i > x1; i--) {
-            spiralMatrixSet.add(mat[i][y2-1]);
-        }
-        for (int i = y2-1; i > y1; i--) {
-            spiralMatrixSet.add(mat[x1][i]);
-        }
+    }
 
+    private static void printMatrix(int[][] matrix, int x, int y) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
+               System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
+    private static void printList(List<Integer> arr) {
+        System.out.println("Result : ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
     }
         
 }
